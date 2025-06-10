@@ -39,7 +39,7 @@ Este proyecto es el frontend de una aplicación web para la gestión de un resta
 
 ## Conexión con el backend
 
-El frontend se comunica con el backend a través de la API REST desarrollada en Django. Asegúrate de que el backend esté en ejecución en [http://localhost:8000](http://localhost:8000) antes de utilizar el frontend.
+El frontend se comunica con el backend a través de la API REST desarrollada en Django. La API está desplegada en [https://wilderdetati1.pythonanywhere.com/](https://wilderdetati1.pythonanywhere.com/).
 
 ## Construcción para producción
 

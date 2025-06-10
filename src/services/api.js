@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://wilderdetati1.pythonanywhere.com/api';
 
 // Crear una instancia de Axios con configuraciones comunes
 const api = axios.create({

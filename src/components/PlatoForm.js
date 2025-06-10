@@ -46,7 +46,7 @@ const PlatoForm = ({ plato, onSave, onCancel }) => {
       });
       
       if (plato.imagen) {
-        setPreviewImage(plato.imagen.startsWith('http') ? plato.imagen : `http://localhost:8000${plato.imagen}`);
+        setPreviewImage(plato.imagen.startsWith('http') ? plato.imagen : `https://wilderdetati1.pythonanywhere.com${plato.imagen}`);
       }
     }
   }, [plato]);

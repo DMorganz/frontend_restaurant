@@ -6,7 +6,7 @@ const PlatoCard = ({ plato }) => {
       <div className="h-48 relative">
         {plato.imagen ? (
           <img
-            src={plato.imagen.startsWith('http') ? plato.imagen : `http://localhost:8000${plato.imagen}`}
+            src={plato.imagen.startsWith('http') ? plato.imagen : `https://wilderdetati1.pythonanywhere.com${plato.imagen}`}
             alt={plato.nombre}
             className="absolute top-0 left-0 w-full h-full object-cover"
             onError={(e) => {

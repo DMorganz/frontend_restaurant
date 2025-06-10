@@ -69,7 +69,7 @@ const CategoriaDetailPage = () => {
           <div className="md:w-1/3 mb-4 md:mb-0">
             {categoria.imagen ? (
               <img 
-                src={`http://localhost:8000${categoria.imagen}`} 
+                src={`https://wilderdetati1.pythonanywhere.com${categoria.imagen}`} 
                 alt={categoria.nombre} 
                 className="w-full h-auto rounded-lg"
               />

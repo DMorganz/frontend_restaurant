@@ -22,7 +22,7 @@ const CategoriaForm = ({ categoria, onSave, onCancel }) => {
       });
       
       if (categoria.imagen) {
-        setPreviewImage(categoria.imagen.startsWith('http') ? categoria.imagen : `http://localhost:8000${categoria.imagen}`);
+        setPreviewImage(categoria.imagen.startsWith('http') ? categoria.imagen : `https://wilderdetati1.pythonanywhere.com${categoria.imagen}`);
       }
     }
   }, [categoria]);

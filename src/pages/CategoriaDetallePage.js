@@ -141,7 +141,7 @@ const CategoriaDetallePage = () => {
             <div className="md:w-1/3 mb-4 md:mb-0">
               <div className="h-64 relative overflow-hidden rounded-lg">
                 <img
-                  src={categoria.imagen.startsWith('http') ? categoria.imagen : `http://localhost:8000${categoria.imagen}`}
+                  src={categoria.imagen.startsWith('http') ? categoria.imagen : `https://wilderdetati1.pythonanywhere.com${categoria.imagen}`}
                   alt={categoria.nombre}
                   className="absolute top-0 left-0 w-full h-full object-cover"
                   onError={(e) => {

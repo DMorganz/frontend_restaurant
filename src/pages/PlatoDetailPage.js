@@ -62,7 +62,7 @@ const PlatoDetailPage = () => {
           <div className="md:w-1/2">
             {plato.imagen ? (
               <img 
-                src={`http://localhost:8000${plato.imagen}`} 
+                src={`https://wilderdetati1.pythonanywhere.com${plato.imagen}`} 
                 alt={plato.nombre} 
                 className="w-full h-full object-cover"
               />

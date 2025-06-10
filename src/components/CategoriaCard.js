@@ -6,7 +6,7 @@ const CategoriaCard = ({ categoria }) => {
       <div className="h-48 relative">
         {categoria.imagen ? (
           <img
-            src={categoria.imagen.startsWith('http') ? categoria.imagen : `http://localhost:8000${categoria.imagen}`}
+            src={categoria.imagen.startsWith('http') ? categoria.imagen : `https://wilderdetati1.pythonanywhere.com${categoria.imagen}`}
             alt={categoria.nombre}
             className="absolute top-0 left-0 w-full h-full object-cover"
             onError={(e) => {
