@@ -41,8 +41,19 @@ export const platoService = {
   // Obtener todos los platos
   getAll: () => api.get('/platos/'),
   
-  // Obtener platos destacados
-  getDestacados: () => api.get('/platos/destacados/'),
+  // Obtener platos destacados - si el endpoint específico no funciona, obtenemos todos y filtramos
+  getDestacados: async () => {
+    try {
+      // Intenta obtener los destacados usando el endpoint específico
+      return await api.get('/platos/destacados/');
+    } catch (error) {
+      // Si falla, obtiene todos los platos y filtra los destacados
+      console.log('Fallback: Obteniendo todos los platos y filtrando destacados');
+      const response = await api.get('/platos/');
+      const platosDestacados = response.data.filter(plato => plato.destacado === true);
+      return { data: platosDestacados };
+    }
+  },
   
   // Obtener platos por categoría
   getPorCategoria: (categoriaId) => api.get(`/platos/por_categoria/?categoria_id=${categoriaId}`),

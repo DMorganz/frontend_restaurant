@@ -19,12 +19,13 @@ const HomePage = () => {
         ]);
         
         setCategorias(categoriasResponse.data);
+        console.log('Respuesta de platos destacados:', platosDestacadosResponse);
         setPlatosDestacados(platosDestacadosResponse.data);
         setLoading(false);
       } catch (err) {
         setError('Error al cargar los datos');
         setLoading(false);
-        console.error(err);
+        console.error('Error detallado:', err);
       }
     };
 
@@ -87,11 +88,21 @@ const HomePage = () => {
           <h2 className="text-2xl font-bold">Platos Destacados</h2>
           <Link to="/platos" className="text-blue-600 hover:underline">Ver todos</Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {platosDestacados.map(plato => (
-            <PlatoCard key={plato.id} plato={plato} />
-          ))}
-        </div>
+        
+        {platosDestacados.length === 0 ? (
+          <div className="bg-white rounded-lg shadow p-6 text-center">
+            <p className="text-gray-600 mb-2">No hay platos destacados disponibles.</p>
+            <Link to="/platos" className="text-blue-600 hover:underline">
+              Ver todos los platos
+            </Link>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {platosDestacados.map(plato => (
+              <PlatoCard key={plato.id} plato={plato} />
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );
