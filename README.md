@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Frontend de Restaurante App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es el frontend de una aplicación web para la gestión de un restaurante, desarrollado con React y estilizado con Tailwind CSS.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- Visualización de categorías de platos
+- Visualización de platos por categoría
+- Detalles de platos
+- Filtrado de platos por categoría
+- Diseño responsive con Tailwind CSS
 
-### `npm start`
+## Tecnologías utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- React Router DOM
+- Axios para consumir la API
+- Tailwind CSS para estilos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estructura del proyecto
 
-### `npm test`
+- `src/components`: Componentes reutilizables
+- `src/pages`: Páginas de la aplicación
+- `src/services`: Servicios para comunicarse con la API
+- `src/assets`: Recursos estáticos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instalación y ejecución
 
-### `npm run build`
+1. Clonar el repositorio
+2. Instalar dependencias:
+   ```
+   npm install
+   ```
+3. Iniciar el servidor de desarrollo:
+   ```
+   npm start
+   ```
+4. Abrir [http://localhost:3000](http://localhost:3000) en el navegador
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Conexión con el backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El frontend se comunica con el backend a través de la API REST desarrollada en Django. Asegúrate de que el backend esté en ejecución en [http://localhost:8000](http://localhost:8000) antes de utilizar el frontend.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Construcción para producción
 
-### `npm run eject`
+Para construir la aplicación para producción:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Los archivos generados estarán en la carpeta `build/`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Despliegue
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para el despliegue se puede utilizar un servicio de hosting gratuito como Netlify o Vercel.
