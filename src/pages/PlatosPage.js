@@ -4,6 +4,7 @@ import { platoService } from '../services/api';
 import PlatoCard from '../components/PlatoCard';
 import PlatoForm from '../components/PlatoForm';
 import ConfirmDialog from '../components/ConfirmDialog';
+import ModalContainer from '../components/ModalContainer';
 
 const PlatosPage = () => {
   const [platos, setPlatos] = useState([]);
@@ -145,17 +146,17 @@ const PlatosPage = () => {
         </div>
       )}
 
-      {showForm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl w-full">
-            <PlatoForm
-              plato={currentPlato}
-              onSave={handleFormSave}
-              onCancel={handleFormCancel}
-            />
-          </div>
-        </div>
-      )}
+      <ModalContainer 
+        isOpen={showForm} 
+        onClose={handleFormCancel}
+        title={currentPlato ? "Editar Plato" : "Nuevo Plato"}
+      >
+        <PlatoForm
+          plato={currentPlato}
+          onSave={handleFormSave}
+          onCancel={handleFormCancel}
+        />
+      </ModalContainer>
 
       <ConfirmDialog
         isOpen={showConfirmDialog}

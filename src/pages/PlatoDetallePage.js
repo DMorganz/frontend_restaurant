@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { platoService } from '../services/api';
 import PlatoForm from '../components/PlatoForm';
 import ConfirmDialog from '../components/ConfirmDialog';
+import ModalContainer from '../components/ModalContainer';
 
 const PlatoDetallePage = () => {
   const { id } = useParams();
@@ -191,17 +192,17 @@ const PlatoDetallePage = () => {
         </div>
       </div>
 
-      {showForm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl w-full">
-            <PlatoForm
-              plato={plato}
-              onSave={handleFormSave}
-              onCancel={handleFormCancel}
-            />
-          </div>
-        </div>
-      )}
+      <ModalContainer 
+        isOpen={showForm} 
+        onClose={handleFormCancel}
+        title="Editar Plato"
+      >
+        <PlatoForm
+          plato={plato}
+          onSave={handleFormSave}
+          onCancel={handleFormCancel}
+        />
+      </ModalContainer>
 
       <ConfirmDialog
         isOpen={showConfirmDialog}

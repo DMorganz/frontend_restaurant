@@ -94,11 +94,7 @@ const CategoriaForm = ({ categoria, onSave, onCancel }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-bold mb-6">
-        {categoria && categoria.id ? 'Editar Categoría' : 'Nueva Categoría'}
-      </h2>
-      
+    <div>
       {error && (
         <div className="bg-red-100 text-red-800 p-3 rounded mb-4">
           {error}
@@ -176,18 +172,18 @@ const CategoriaForm = ({ categoria, onSave, onCancel }) => {
           </label>
         </div>
         
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 pt-4">
           <button
             type="submit"
             disabled={loading}
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             {loading ? 'Guardando...' : 'Guardar'}
           </button>
           <button
             type="button"
             onClick={onCancel}
-            className="bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            className="flex-1 bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
           >
             Cancelar
           </button>
